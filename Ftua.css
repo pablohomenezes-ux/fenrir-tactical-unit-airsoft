@@ -1,0 +1,237 @@
+:root {
+  --verde-fosco: #4CAF50;
+  --preto-fosco: #1a1a1a;
+  --cinza-militar: #2e2e2e;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Black Ops One', sans-serif;
+  background-color: #1a1a1a; /* fallback */
+  background-image: url('camuflagem.png'); /* textura militar */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* mantém o fundo ao rolar */
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: var(--cinza-militar);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--verde-fosco);
+}
+
+header h1 {
+  font-size: 2.2em;
+  color: var(--verde-fosco);
+}
+
+.logo {
+  max-width: 90px;
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde-fosco);
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1607083206173-3e4e1b2e6e3c');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--verde-fosco);
+  border-radius: 6px;
+}
+
+section {
+  padding: 30px 20px;
+  background-color: var(--cinza-militar);
+  border-top: 1px solid #333;
+}
+
+section h3 {
+  font-size: 1.8em;
+  color: var(--verde-fosco);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: #222;
+  border-left: 8px solid var(--verde-fosco);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 15px #4CAF50;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .hero h2 {
+    font-size: 1.2em;
+  }
+
+  section h3 {
+    font-size: 1.3em;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botão flutuante no canto inferior direito */
+#topBtn {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: var(--verde-fosco);
+  color: var(--branco);
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #388E3C; /* tom mais escuro */
+}
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.calendar th, .calendar td {
+  border: 1px solid var(--verde-fosco);
+  padding: 8px;
+  text-align: center;
+}
+
+.calendar th {
+  background-color: var(--verde-fosco);
+  color: var(--branco);
+}
+
+.carousel {
+  position: relative;
+  max-width: 200px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 2px solid var(--verde-fosco);
+  border-radius: 5px;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+.faq-answer {
+  display: none;
+  background: #222;
+  padding: 10px;
+  margin-top: 5px;
+  border-left: 4px solid var(--verde-fosco);
+}
+.faq-question {
+  width: 100%;
+  background: var(--cinza-militar);
+  color: var(--branco);
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--branco);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--verde-fosco);
+}
+
+/* Cores temáticas */
+.social-btn.instagram { background-color: #E1306C; }
+.social-btn.whatsapp { background-color: #25D366; }
